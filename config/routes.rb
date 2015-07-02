@@ -2,6 +2,16 @@ Rails.application.routes.draw do
   get 'pages/home'
 
   get 'pages/contact'
+  
+  
+  match '/contact', :to => 'pages#contact'
+match '/about',
+:to => 'pages#about'
+match '/help',
+:to => 'pages#help'
+root :to => 'pages#home'
+root_path => '/'
+root_url => 'http://localhost:3000/'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
